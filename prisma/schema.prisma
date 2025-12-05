@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb" 
+
+}
+
+
+type Trip {
+  id          String   @db.ObjectId
+  title       String
+  description String
+  grade       String
+}
