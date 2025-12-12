@@ -12,7 +12,7 @@ const ROUTES = [
 ];
 
 export default function HomePage() {
-  const [activeRoute, setActiveRoute] = useState(null);
+  const [activeRoute, setActiveRoute] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const route = ROUTES.find((r) => r.id === activeRoute);
@@ -65,3 +65,4 @@ export default function HomePage() {
     </main>
   );
 }
+
